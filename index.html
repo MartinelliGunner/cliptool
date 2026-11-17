@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClipTool: About, Privacy Policy and Terms</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: formal, plain, a well-set policy memo
+   IDEA: a printed terms sheet
+   PICTURE: none, the text is the object
+   COLOUR and TYPE: black on white, one ruled accent, Hanken Grotesk
+   LAYOUT: single calm column, section links at the top */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#161615);--ink:light-dark(#141414,#ececea);--mute:light-dark(#5a5a57,#a3a39e);--rule:light-dark(#d8d8d4,#3a3a37);--acc:light-dark(#b42318,#ff8a7a)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Hanken Grotesk",system-ui,sans-serif;overflow-x:clip}
+main{max-width:720px;margin:0 auto;padding:clamp(28px,5vw,64px) max(5vw,16px) 80px}
+h1{font-size:clamp(32px,5vw,44px);line-height:1.05;margin:0 0 12px;text-wrap:balance;font-weight:700}
+h2{font-size:22px;line-height:1.2;margin:40px 0 8px;padding-top:16px;border-top:1px solid var(--rule)}
+.meta{color:var(--mute);font-size:15px;margin:0 0 24px}
+.yt{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:500;margin-bottom:18px}
+.scroll{display:flex;gap:18px;overflow-x:auto;padding:10px 0 14px;border-bottom:2px solid var(--ink);font-size:15px}
+.scroll a{flex:none}
+a{color:var(--acc)}
+a:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+ul{padding-left:1.2em}li{margin:4px 0}
+code{font-size:15px;overflow-wrap:anywhere}
+html{scroll-padding-top:24px;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<main>
+<div class="yt"><svg width="34" height="24" viewBox="0 0 34 24" aria-hidden="true"><rect width="34" height="24" rx="6" fill="#FF0000"/><path d="M13.5 6.8v10.4L22.5 12z" fill="#fff"/></svg><span>Uses YouTube API Services</span></div>
+<h1>ClipTool</h1>
+<p class="meta">About the app, its privacy policy and terms of use. Last updated 17 November 2026.</p>
+<nav class="scroll" aria-label="Sections">
+<a href="#about">About</a><a href="#data">Data used</a><a href="#storage">Storage</a><a href="#sharing">Sharing</a><a href="#youtube">YouTube API</a><a href="#delete">Deleting data</a><a href="#revoke">Revoking access</a><a href="#terms">Terms of use</a><a href="#contact">Contact</a>
+</nav>
+
+<h2 id="about">About ClipTool</h2>
+<p>ClipTool is a private desktop application that runs on its owner's own Windows computer. It is used by one person to manage one YouTube channel, <a href="https://www.youtube.com/@longlat11">@longlat11</a>. It is not offered, sold or made available to anyone else, and it has no public website, login page or user accounts.</p>
+<p>ClipTool uses the YouTube Data API to:</p>
+<ul>
+<li>find recent and trending public videos on the channel's topics (cars and car deals, technology and AI);</li>
+<li>upload short vertical clips (Shorts) to the owner's own channel, with captions, a title, a description and a credit line linking the original video;</li>
+<li>set thumbnails and update titles on the owner's own uploads;</li>
+<li>read the owner's channel and upload list, so the same video is not posted twice.</li>
+</ul>
+
+<h2 id="data">What data ClipTool uses</h2>
+<ul>
+<li><strong>Google account authorisation.</strong> When the owner signs in, Google issues an access token that lets ClipTool act on the owner's YouTube channel. ClipTool requests only the YouTube permissions it needs for the actions above.</li>
+<li><strong>Channel and video information.</strong> The owner's channel ID, upload list, and the titles, IDs and statistics of the owner's uploads.</li>
+<li><strong>Public video information.</strong> Titles, view counts, durations and other public details of videos returned by YouTube search and trending charts.</li>
+</ul>
+<p>ClipTool does not collect data from any other YouTube user, viewer or channel owner. It does not use cookies, analytics, advertising identifiers or tracking of any kind.</p>
+
+<h2 id="storage">How data is stored</h2>
+<p>Everything stays on the owner's own computer. The access token is saved in a local file in the app's folder, and a local record of uploaded clips is kept so videos are not posted twice. Nothing is sent to any server operated by ClipTool, because there is none. Local files are deleted when the owner deletes them or removes the app.</p>
+
+<h2 id="sharing">Sharing</h2>
+<p>ClipTool does not sell, rent or share any data with third parties. Data is only exchanged with Google and YouTube, through the YouTube API, to carry out the actions listed above.</p>
+
+<h2 id="youtube">YouTube API Services</h2>
+<p>ClipTool uses YouTube API Services. By using ClipTool, the user agrees to be bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>, and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> applies to data handled through the YouTube API.</p>
+<p>The YouTube data ClipTool accesses is listed under "What data ClipTool uses" above. It is used only to find videos and to upload and manage Shorts on the owner's own channel.</p>
+
+<h2 id="delete">Deleting data</h2>
+<ul>
+<li>ClipTool keeps no data on any server. Everything it stores is in files on the owner's own computer: the sign-in token, the IDs of videos it has already checked, the record of the owner's own uploads, and working copies of clips.</li>
+<li>Downloaded source videos are deleted after the clips are made.</li>
+<li>The owner can delete all stored data at any time by deleting the ClipTool folder, or only the token file <code>youtube_token.json</code>, the run history <code>autopilot_state.json</code> and the <code>uploaded.json</code> records.</li>
+<li>Revoking access as described below stops ClipTool from using the stored token.</li>
+<li>Questions about data can be sent through the contact below.</li>
+</ul>
+
+<h2 id="revoke">Revoking access</h2>
+<p>Access can be withdrawn at any time from the Google account's security settings at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. Deleting the local token file also stops the app from acting on the channel.</p>
+
+<h2 id="terms">Terms of use</h2>
+<ul>
+<li><strong>Who may use it.</strong> ClipTool is a private tool used only by its owner on their own computer for their own YouTube channel. It is not offered to the public and has no other users.</li>
+<li><strong>YouTube terms.</strong> Use of ClipTool requires agreeing to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> and is subject to the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. ClipTool's use of the YouTube API follows the <a href="https://developers.google.com/youtube/terms/api-services-terms-of-service">YouTube API Services Terms of Service</a> and <a href="https://developers.google.com/youtube/terms/developer-policies">Developer Policies</a>.</li>
+<li><strong>Content.</strong> Clips posted with ClipTool credit and link the original video. Content is removed promptly if a rights holder objects.</li>
+<li><strong>No warranty.</strong> ClipTool is provided as is, for personal use.</li>
+<li><strong>Changes.</strong> These terms and the privacy policy may be updated. The date at the top shows the latest version.</li>
+</ul>
+
+<h2 id="contact">Contact</h2>
+<p>Questions about this policy can be sent to the owner of the <a href="https://www.youtube.com/@longlat11/about">@longlat11 YouTube channel</a>.</p>
+</main>
+</body>
+</html>
